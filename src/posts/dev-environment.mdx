@@ -1,0 +1,88 @@
+---
+title: DeV Environment
+date: 2025-02-06
+slug: /dev-environment
+---
+
+This is not a post about ecology but rather a post about the struggles I face when trying to
+handle multiple development environments. It's a common problem for developers who work on
+multiple projects with different requirements. This article will cover some of the tools and
+techniques I use to manage my development environments and make my life easier.
+
+## Why is it a struggle?
+
+When you work on multiple projects, you often have to deal with different versions of libraries,
+frameworks, and tools. This can lead to conflicts and compatibility issues that can be hard to
+resolve. For example, you might have one project that requires Python 2.7 and another that requires Python 3.x.
+If you try to run both projects on the same machine, you'll run into problems because the two versions of Python
+are not compatible with each other. This is just one example of the many issues that can arise when
+dealing with multiple development environments. And the struggles varies alot depending on the
+technologies you use. I have worked with a lot of different technologies and I can tell you that
+each one has its own set of challenges.
+
+## Tools and Techniques
+
+I will first talk from my tech stack perspective, then I will talk about the most common tools and techniques
+I know about. I will also try to give you some tips on how to use them effectively.
+
+### The Python struggles
+
+Python is my goto language for scripts, automation and quick prototyping. As a CTF player, I often have to deal with
+different versions of Python and different libraries. There are many tools to handle Python environments, but
+I found a VSCode extension called [Python Environment Manager](https://marketplace.visualstudio.com/items?itemName=ms-python.python-environment-manager)
+that is based on `pyenv` and `virtualenv`. It allows you to create and manage virtual environments directly from VSCode.
+As from python 3.12 using virtual environments is now the default way to manage Python projects it even became a
+necessity. A quick google search will give you a lot of resources on how to use `pyenv` and `virtualenv` the
+two most popular and straightforward tools for managing Python environments. For other tools I want to be available
+globally I use `pipx`. Some people like to use `conda` but It is a bit overkill for small projects.
+Anyway, One classic thing is to use `pip freeze > requirements.txt` to save your dependencies
+and `pip install -r requirements.txt` to install them. This is common good practice among python devs which
+reduces the struggles. About working with Python2 no one is doing that anymore, but if you have to this
+dinosaur is still around and can be installed with `pyenv` too.
+
+### The Node.js struggles
+
+Node.js is nowadays hard to avoid, especially if you are a web developer. It is used for
+everything from front-end development to back-end development. The struggles with Node.js are mostly
+related to package management and versioning. The most common tool for managing Node.js environments is `nvm`
+(Node Version Manager). It allows you to install and manage multiple versions of Node.js on your machine.
+You can switch between versions easily and it works well with `npm` (Node Package Manager) and `yarn`.
+You can also use `npx` to run packages without installing them globally. This is useful for running scripts
+or tools that you don't want to install permanently. Just use nvm and you might be fine.
+
+### The Android studio struggles
+
+Well, Android development is a whole different beast. The struggles here are mostly related to version conflicts
+among everything. I used to do native Android development with Java and Kotlin, but now I mostly use Flutter.
+Flutter is a great framework for cross-platform development, but it has its own set of challenges.
+The main struggle is managing the different versions of Flutter and Dart. The best way I found so far
+to manage multiple Flutter are tools called [Puro](https://puro.dev/) and [fvm](https://fvm.app/). Very similar
+but Puro is more recent and has a better integration with VSCode.
+
+Also, [Flutter Migrate](https://github.com/flutter/flutter/blob/master/docs/wiki_archive/Flutter-migrate.md) might
+be useful if you are migrating from an old version of Flutter to a new one. It helps you update your code
+to the latest version of Flutter and Dart. It is a bit of a hassle to use, but it can save you a lot of time
+in the long run. If you are using Android Studio, you can use the built-in
+`SDK Manager` to manage your Android SDK versions...ish
+
+### Docker and Containers
+
+Our savior! Docker is a great tool for managing development environments. It allows you to create
+containers that can run on any machine, regardless of the underlying operating system.
+You can create a container for each project and specify the dependencies and tools you need.
+This way, you can avoid conflicts and compatibility issues. Docker also allows you to share your
+containers with others, which is great for collaboration. You can use Docker Compose to define and run
+multi-container applications. This is especially useful for web development, where you might need
+a database, a web server, and an application server all running together. Docker is a powerful tool that can help you manage your development environments and make your life easier.
+However, it has a learning curve and can be a bit overwhelming at first.
+There are many resources available online to help you get started with Docker and Docker Compose.
+I recommend checking out the official documentation and some tutorials to get familiar with the basics.
+
+### Other Tools and Techniques
+
+There are many other tools and techniques that can help you manage your development environments.
+Here are some of the most common ones:
+
+- **Virtual Machines**: You can use virtual machines to create isolated environments for your projects.
+  Tools like VirtualBox and VMware allow you to create and manage virtual machines easily.
+- **Vagrant**: Vagrant is a tool that allows you to create and manage virtual
