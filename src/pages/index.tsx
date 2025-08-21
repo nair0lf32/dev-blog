@@ -41,9 +41,9 @@ export default function Home({data}: any) {
         <p style={paragraphStyle}>
         And below is what I already started to write about:  </p>
       <ul>
-              <li><a href="https://website32.nairolf32.com/">Website32</a>: My Personal blog for unexpected topics and nonsenses</li>
-      <li><a href="https://dev.nairolf32.com/zer0ne-blog">zer0ne</a>: My Cybersecurity blog</li>
-        <li><a href="https://dev.nairolf32.com/mcs">MedicalCheatsheets</a>: A comprehensive knowledge base about medical pathologies</li>
+              <li><a href="https://blog.nairolf32.com/">blog</a>: My Personal blog for unexpected topics and nonsenses</li>
+      <li><a href="https://https://zer0ne-hub.github.io/zer0ne-blog/">zer0ne's blog</a>: My Cybersecurity blog</li>
+        <li><a href="https://medicrx.github.io/mcs/">MedicalCheatsheets</a>: A comprehensive knowledge base about medical pathologies</li>
       </ul>
 
         <p style={paragraphStyle}>
